@@ -1,0 +1,29 @@
+body {
+    background: #f8fafc;
+}
+.card {
+    border-radius: 1rem;
+    border: none;
+}
+.card-title {
+    color: #ff5722;
+    font-weight: 700;
+}
+footer {
+    font-size: 0.95rem;
+    color: #888;
+}
+.alert-warning {
+    background: #fff3cd;
+    color: #856404;
+    border: none;
+    border-radius: 0.5rem;
+}
+.btn-outline-primary {
+    border-color: #ff9800;
+    color: #ff9800;
+}
+.btn-outline-primary:hover {
+    background: #ff9800;
+    color: #fff;
+} 

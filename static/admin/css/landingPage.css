@@ -1,0 +1,124 @@
+:root {
+    --primary: #ff9800;
+    --secondary: #ff5722;
+    --bg-light: #f8fafc;
+    --bg-dark: #181a1b;
+    --text-light: #2d3748;
+    --text-dark: #f8fafc;
+    --card-bg-light: #fff;
+    --card-bg-dark: #23272f;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    font-family: 'Poppins', Arial, sans-serif;
+    color: var(--text-light);
+    transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background: linear-gradient(135deg, #23272f 0%, #181a1b 100%);
+    color: var(--text-dark);
+}
+
+.navbar {
+    background: rgba(255,255,255,0.95) !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+body.dark-mode .navbar {
+    background: rgba(24,26,27,0.95) !important;
+}
+
+.navbar-brand {
+    font-size: 2rem;
+    color: var(--text-light) !important;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+body.dark-mode .navbar-brand {
+    color: var(--text-dark) !important;
+}
+
+.hero {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    padding: 2rem 1rem;
+    background: var(--card-bg-light);
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+body.dark-mode .hero {
+    background: var(--card-bg-dark);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+}
+
+.hero-illustration {
+    width: 120px;
+    margin-bottom: 1.5rem;
+    filter: drop-shadow(0 2px 8px rgba(0,0,0,0.08));
+}
+
+.display-4 {
+    color: var(--primary);
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+body.dark-mode .display-4 {
+    color: #ffd580;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+    border: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: 0.75rem 2.5rem;
+    border-radius: 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn-primary:hover {
+    background: linear-gradient(90deg, var(--secondary) 0%, var(--primary) 100%);
+    transform: scale(1.05);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+
+.toggle-dark {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--primary);
+    cursor: pointer;
+    z-index: 10;
+}
+body.dark-mode .toggle-dark {
+    color: #ffd580;
+}
+
+footer {
+    font-size: 0.95rem;
+    color: #888;
+    background: transparent;
+}
+
+@media (max-width: 600px) {
+    .hero {
+        padding: 1.2rem 0.5rem;
+        border-radius: 1rem;
+    }
+    .display-4 {
+        font-size: 2rem;
+    }
+    .btn-primary {
+        font-size: 1rem;
+        padding: 0.6rem 1.5rem;
+    }
+} 
